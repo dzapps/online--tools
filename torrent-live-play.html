@@ -105,11 +105,11 @@
         <div class="form">
             <div class="formItem">
                <label>URL:</label>
-               <input id="url" type="text" placeHolder="种子地址">
+               <input id="url" type="text" placeHolder="Adresse">
             </div>
             <div class="formItem">
                 <label>Filename:</label>
-                <input id="filename" type="text" placeHolder="种子中要播放的文件名称">
+                <input id="filename" type="text" placeHolder="Le nom du fichier à jouer">
             </div>
         </div>
         <div class="button-box">
@@ -120,15 +120,15 @@
 <script>
     var ua = navigator.userAgent;
     if (/mobile/i.test(ua)) {
-        alert('建议在电脑上使用！');
+        alert('Recommandé pour une utilisation sur un ordinateur！');
     }
     if (!/chrome/i.test(ua)) {
-        alert('请使用Chrome浏览器！');
+        alert('S'il vous plaît utiliser le navigateur Chrome！');
     }
 
     var exampleUrl = 'magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10&dn=Sintel&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F&xs=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel.torrent';
     var exampleFilename = 'Sintel.mp4';
-    var title = '<h1>PlayGround</h1><p>种子是否可以播放取决于您的网速、种子提供方连接畅通性和URL的正确性等方面。【此页面仅用于web技术学习和交流】</p>'
+    var title = '<h1>PlayGround</h1><p>Que la graine puisse être lue dépend de la vitesse de votre réseau, de la régularité de la connexion au fournisseur de la graine et de l'exactitude de l'URL. [Cette page est uniquement destinée à l'apprentissage et à la communication des technologies Web]</p>'
 
     window.addEventListener('DOMContentLoaded', init)
     
@@ -146,9 +146,9 @@
 
         function fetchRecourse () {
             if (url.value.trim() === '') {
-                alert('请输入正确的url地址！')
+                alert('S'il vous plaît entrer la bonne adresse URL!')
             } else if (filename.value.trim() === '') {
-                alert('请输入种子中要播放的文件名称！')
+                alert('S'il vous plaît entrez le nom du fichier à jouer dans la graine!')
             }
             playGround.innerHTML = '';
             setTimeout(function () {
